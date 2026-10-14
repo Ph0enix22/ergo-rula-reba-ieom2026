@@ -1,0 +1,26 @@
+# Arm C Configuration: ResNet-50 End-to-End Multi-Task Ergonomic Scoring
+pipeline: "arm_c"
+
+model:
+  backbone: "resnet50"
+  pretrained_weights: "DEFAULT"
+  visual_dim: 512
+  config_features_dim: 5
+  config_embedding_dim: 64
+  fused_dim: 576
+  rula_classes: 4
+  reba_classes: 5
+  device: "cpu"
+
+training:
+  epochs: 25
+  batch_size: 4
+  learning_rate: 0.0001
+  loss_weights:
+    rula_regression: 1.0
+    rula_classification: 0.5
+    reba_regression: 0.5
+    reba_classification: 0.5
+  optimizer: "AdamW"
+  weight_decay: 0.0001
+  output_weights: "models/weights/arm_c_best.pt"

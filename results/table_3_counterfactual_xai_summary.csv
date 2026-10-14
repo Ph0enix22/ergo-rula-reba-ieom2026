@@ -1,0 +1,53 @@
+case_name,pipeline,initial_rula,target_rula,initial_reba,target_reba,l1_angular_reduction_deg,recommendation_count,primary_recommendation
+worker_05_forward_reach,Arm A (MediaPipe Pose),7,4,6,3,61.6,3,"Reduce trunk forward bending by 24.0° (from 24.0° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_06_forward_reach_left,Arm A (MediaPipe Pose),7,4,6,3,44.6,3,"Reduce trunk forward bending by 25.0° (from 25.0° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_07_bench_heavy_component,Arm A (MediaPipe Pose),7,4,6,4,64.8,3,"Reduce trunk forward bending by 35.6° (from 35.6° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_09_overhead_maintenance,Arm A (MediaPipe Pose),6,4,5,4,141.9,2,"Reduce trunk forward bending by 17.4° (from 2.6° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_10_overhead_maintenance_left,Arm A (MediaPipe Pose),6,4,6,4,155.9,4,"Reduce trunk forward bending by 18.2° (from 1.8° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_11_overhead_heavy_wrench,Arm A (MediaPipe Pose),7,4,8,5,149.5,3,"Reduce trunk forward bending by 17.1° (from 2.9° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_12_overhead_inspection,Arm A (MediaPipe Pose),5,4,6,5,4.7,1,"Reduce trunk forward bending by 4.7° (from 9.7° to 5.0°), which drops Trunk Posture Score from 2 to 1."
+worker_13_pallet_mid_lift,Arm A (MediaPipe Pose),7,4,6,4,71.3,3,"Reduce trunk forward bending by 39.8° (from 39.8° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_14_pallet_deep_lift,Arm A (MediaPipe Pose),6,4,7,4,85.0,3,"Reduce trunk forward bending by 47.7° (from 47.7° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_15_floor_heavy_lift,Arm A (MediaPipe Pose),6,4,8,5,107.4,3,"Reduce trunk forward bending by 57.1° (from 57.1° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_16_squat_inspection,Arm A (MediaPipe Pose),4,4,3,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_19_parts_bin_reach,Arm A (MediaPipe Pose),7,4,6,3,41.1,3,"Reduce trunk forward bending by 21.6° (from 21.6° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_20_transfer_lift,Arm A (MediaPipe Pose),6,4,6,4,87.6,3,"Reduce trunk forward bending by 40.4° (from 40.4° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_05_forward_reach,Arm A (YOLOv8-Pose),6,4,6,4,43.0,2,"Reduce trunk forward bending by 30.9° (from 30.9° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_06_forward_reach_left,Arm A (YOLOv8-Pose),6,4,6,4,38.6,2,"Reduce trunk forward bending by 28.5° (from 28.5° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_07_bench_heavy_component,Arm A (YOLOv8-Pose),7,4,5,4,55.4,2,"Reduce trunk forward bending by 39.2° (from 39.2° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_09_overhead_maintenance,Arm A (YOLOv8-Pose),6,4,6,4,157.0,3,"Reduce trunk forward bending by 18.4° (from 1.6° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_10_overhead_maintenance_left,Arm A (YOLOv8-Pose),5,4,6,5,130.5,2,"Reduce trunk forward bending by 19.6° (from 0.4° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_11_overhead_heavy_wrench,Arm A (YOLOv8-Pose),6,4,8,5,165.0,3,"Reduce trunk forward bending by 15.5° (from 4.5° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_12_overhead_inspection,Arm A (YOLOv8-Pose),5,4,6,3,98.5,2,"Reduce trunk forward bending by 11.1° (from 11.1° to 0.0°), which drops Trunk Posture Score from 2 to 1."
+worker_13_pallet_mid_lift,Arm A (YOLOv8-Pose),6,4,5,5,25.7,1,"Reduce trunk forward bending by 25.7° (from 45.7° to 20.0°), which drops Trunk Posture Score from 3 to 2."
+worker_14_pallet_deep_lift,Arm A (YOLOv8-Pose),6,4,8,5,81.9,3,"Reduce trunk forward bending by 36.7° (from 36.7° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_15_floor_heavy_lift,Arm A (YOLOv8-Pose),6,4,9,6,99.8,3,"Reduce trunk forward bending by 48.1° (from 48.1° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_16_squat_inspection,Arm A (YOLOv8-Pose),4,4,3,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_19_parts_bin_reach,Arm A (YOLOv8-Pose),6,4,6,4,33.1,2,"Reduce trunk forward bending by 22.6° (from 22.6° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_20_transfer_lift,Arm A (YOLOv8-Pose),5,4,5,5,11.6,1,"Reduce trunk forward bending by 11.6° (from 31.6° to 20.0°), which drops Trunk Posture Score from 3 to 2."
+worker_05_forward_reach,Arm B (ResNet-50 Keypoint R-CNN),6,4,4,4,8.7,1,"Reduce trunk forward bending by 8.7° (from 28.7° to 20.0°), which drops Trunk Posture Score from 3 to 2."
+worker_06_forward_reach_left,Arm B (ResNet-50 Keypoint R-CNN),6,4,6,4,41.4,2,"Reduce trunk forward bending by 28.4° (from 28.4° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_07_bench_heavy_component,Arm B (ResNet-50 Keypoint R-CNN),7,4,5,4,54.4,2,"Reduce trunk forward bending by 40.5° (from 40.5° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_09_overhead_maintenance,Arm B (ResNet-50 Keypoint R-CNN),6,4,6,4,145.1,3,"Reduce trunk forward bending by 16.2° (from 3.8° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_10_overhead_maintenance_left,Arm B (ResNet-50 Keypoint R-CNN),6,4,6,4,140.2,3,"Reduce trunk forward bending by 17.1° (from 2.9° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_11_overhead_heavy_wrench,Arm B (ResNet-50 Keypoint R-CNN),6,4,8,5,139.7,3,"Reduce trunk forward bending by 19.4° (from 0.6° to 20.0°), which drops Trunk Posture Score from 1 to 2."
+worker_12_overhead_inspection,Arm B (ResNet-50 Keypoint R-CNN),5,4,6,3,91.0,2,"Reduce trunk forward bending by 10.5° (from 10.5° to 0.0°), which drops Trunk Posture Score from 2 to 1."
+worker_13_pallet_mid_lift,Arm B (ResNet-50 Keypoint R-CNN),6,4,5,5,29.0,1,"Reduce trunk forward bending by 29.0° (from 49.0° to 20.0°), which drops Trunk Posture Score from 3 to 2."
+worker_14_pallet_deep_lift,Arm B (ResNet-50 Keypoint R-CNN),5,4,5,5,26.3,1,"Reduce trunk forward bending by 26.3° (from 46.3° to 20.0°), which drops Trunk Posture Score from 3 to 2."
+worker_15_floor_heavy_lift,Arm B (ResNet-50 Keypoint R-CNN),5,4,8,6,36.5,1,"Reduce trunk forward bending by 36.5° (from 56.5° to 20.0°), which drops Trunk Posture Score from 3 to 2."
+worker_16_squat_inspection,Arm B (ResNet-50 Keypoint R-CNN),4,4,3,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_19_parts_bin_reach,Arm B (ResNet-50 Keypoint R-CNN),6,4,6,4,31.7,2,"Reduce trunk forward bending by 22.1° (from 22.1° to 0.0°), which drops Trunk Posture Score from 3 to 1."
+worker_20_transfer_lift,Arm B (ResNet-50 Keypoint R-CNN),5,4,5,5,20.8,1,"Reduce trunk forward bending by 20.8° (from 40.8° to 20.0°), which drops Trunk Posture Score from 3 to 2."
+worker_05_forward_reach,Arm C (ResNet-50 End-to-End),4,4,3,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_06_forward_reach_left,Arm C (ResNet-50 End-to-End),3,4,2,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_07_bench_heavy_component,Arm C (ResNet-50 End-to-End),3,4,2,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
+worker_09_overhead_maintenance,Arm C (ResNet-50 End-to-End),4,4,4,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_10_overhead_maintenance_left,Arm C (ResNet-50 End-to-End),4,4,5,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_11_overhead_heavy_wrench,Arm C (ResNet-50 End-to-End),4,4,5,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
+worker_12_overhead_inspection,Arm C (ResNet-50 End-to-End),3,3,4,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_13_pallet_mid_lift,Arm C (ResNet-50 End-to-End),2,4,2,5,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_14_pallet_deep_lift,Arm C (ResNet-50 End-to-End),3,4,3,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
+worker_15_floor_heavy_lift,Arm C (ResNet-50 End-to-End),3,4,3,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
+worker_16_squat_inspection,Arm C (ResNet-50 End-to-End),3,3,3,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_19_parts_bin_reach,Arm C (ResNet-50 End-to-End),4,4,3,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_20_transfer_lift,Arm C (ResNet-50 End-to-End),4,4,4,5,0.0,1,Current posture already satisfies safe ergonomic criteria.

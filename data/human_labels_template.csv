@@ -1,0 +1,6 @@
+image_path,subject_id,view_plane,trunk_angle_deg,neck_angle_deg,upper_arm_angle_deg,lower_arm_angle_deg,wrist_angle_deg,knee_angle_deg,load_kg,muscle_use,wrist_twist,coupling,activity,human_rula_score,human_reba_score,is_pseudo_label,notes
+data/canonical_validation/worker_01_neutral.jpg,subject_01,sagittal_right,0.0,8.0,15.0,90.0,0.0,0.0,0,1,1,0,0,2,1,False,Office computer worker sitting upright
+data/canonical_validation/worker_02_forward_reach.jpg,subject_02,sagittal_right,25.0,18.0,55.0,95.0,10.0,0.0,2,1,1,1,1,4,4,False,Assembly bench reach with light tool
+data/canonical_validation/worker_03_overhead_work.jpg,subject_03,sagittal_right,10.0,28.0,95.0,110.0,25.0,0.0,6,1,2,2,1,7,8,False,Overhead automotive maintenance high shoulder strain
+data/canonical_validation/worker_04_deep_pallet_lift.jpg,subject_04,sagittal_right,55.0,25.0,60.0,50.0,20.0,50.0,12,0,1,2,1,7,12,False,Floor manual material handling deep flexion
+data/canonical_validation/worker_05_conveyor_sorting.jpg,subject_05,sagittal_right,15.0,12.0,35.0,85.0,18.0,0.0,1,1,1,0,1,3,3,False,Standing conveyor pack station

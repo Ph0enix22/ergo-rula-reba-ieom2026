@@ -1,0 +1,32 @@
+# Default Configuration for Ergonomic Posture Assessment (RULA & REBA)
+project:
+  name: "ergo-rula-reba"
+  version: "1.0.0"
+  conference: "IEOM 2026"
+  paper_id: "283"
+
+evaluation:
+  benchmark_csv: "data/canonical_validation.csv"
+  results_dir: "results"
+  save_figures: true
+  subject_split_seed: 42
+  metrics:
+    - exact_score_accuracy
+    - within_pm1_accuracy
+    - cohen_kappa_linear
+    - cohen_kappa_quadratic
+    - macro_f1
+    - angle_mae
+    - pck_02
+    - mpjpe
+    - cpu_fps_latency
+
+privacy:
+  face_blur: true
+  blur_kernel: 31
+  local_only: true
+
+counterfactual_xai:
+  target_rula_action_level: 2
+  target_reba_action_level: 1
+  l1_penalty_weight: 1.0

@@ -1,0 +1,21 @@
+# Arm A Configuration: MediaPipe Pose (Primary) and YOLOv8n-pose (Baseline)
+pipeline: "arm_a"
+
+backbone_mediapipe:
+  name: "mediapipe_pose"
+  model_asset_path: "models/weights/pose_landmarker_lite.task"
+  min_detection_confidence: 0.5
+  min_pose_presence_confidence: 0.5
+  min_tracking_confidence: 0.5
+  delegate: "CPU"
+
+backbone_yolov8:
+  name: "yolov8n-pose"
+  weights: "yolov8n-pose.pt"
+  conf_threshold: 0.25
+  iou_threshold: 0.45
+
+view_plane: "auto"
+rule_engine:
+  enforce_bounds: true
+  sagittal_priority: true

@@ -1,0 +1,2 @@
+# Keep weights directory structure in git
+# Pretrained weights (*.pt, *.task, *.pth) are ignored by .gitignore and auto-downloaded on first run

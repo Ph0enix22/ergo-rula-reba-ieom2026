@@ -1,0 +1,21 @@
+image_path,subject_id,view_plane,trunk_angle_deg,neck_angle_deg,upper_arm_angle_deg,lower_arm_angle_deg,wrist_angle_deg,knee_angle_deg,load_kg,muscle_use,wrist_twist,coupling,activity,human_rula_score,human_reba_score,is_pseudo_label,notes
+data/canonical_validation/worker_01_standing_neutral.jpg,subject_01,sagittal_right,0.0,5.0,5.0,90.0,0.0,0.0,0,0,1,0,0,1,1,False,Neutral standing quality inspector
+data/canonical_validation/worker_02_standing_neutral_left.jpg,subject_01,sagittal_left,0.0,5.0,5.0,90.0,0.0,0.0,0,0,1,0,0,1,1,False,Neutral standing left sagittal view
+data/canonical_validation/worker_03_standing_inspect_neck.jpg,subject_01,sagittal_right,12.0,18.0,15.0,85.0,0.0,0.0,0,1,1,0,0,3,2,False,Upright clipboard inspection with neck flexion
+data/canonical_validation/worker_04_standing_light_tool.jpg,subject_01,sagittal_right,5.0,8.0,25.0,80.0,10.0,0.0,2,1,1,0,0,4,2,False,Standing holding barcode scanner tool
+data/canonical_validation/worker_05_forward_reach.jpg,subject_02,sagittal_right,28.0,20.0,35.0,95.0,10.0,0.0,2,1,1,1,1,7,4,False,Bench assembly forward reach
+data/canonical_validation/worker_06_forward_reach_left.jpg,subject_02,sagittal_left,28.0,20.0,35.0,95.0,10.0,0.0,2,1,1,1,1,7,4,False,Bench assembly left sagittal view
+data/canonical_validation/worker_07_bench_heavy_component.jpg,subject_02,sagittal_right,35.0,22.0,45.0,100.0,15.0,0.0,5,1,2,2,1,7,6,False,Bench reach holding 5kg gearbox
+data/canonical_validation/worker_08_precision_wiring.jpg,subject_02,sagittal_right,20.0,15.0,30.0,90.0,20.0,0.0,1,1,1,1,0,3,3,False,Precision electronic wiring task
+data/canonical_validation/worker_09_overhead_maintenance.jpg,subject_03,sagittal_right,2.0,25.0,140.0,20.0,10.0,15.0,2,1,1,1,1,6,6,False,Conveyor overhead maintenance reach
+data/canonical_validation/worker_10_overhead_maintenance_left.jpg,subject_03,sagittal_left,2.0,25.0,140.0,20.0,10.0,15.0,2,1,1,1,1,6,6,False,Conveyor overhead reach left sagittal view
+data/canonical_validation/worker_11_overhead_heavy_wrench.jpg,subject_03,sagittal_right,5.0,30.0,145.0,30.0,25.0,10.0,7,1,2,2,1,7,9,False,Overhead tightening with 7kg torque tool
+data/canonical_validation/worker_12_overhead_inspection.jpg,subject_03,sagittal_right,10.0,35.0,130.0,15.0,15.0,20.0,1,1,1,1,0,5,6,False,Overhead visual inspection with neck extension
+data/canonical_validation/worker_13_pallet_mid_lift.jpg,subject_04,sagittal_right,42.0,25.0,50.0,70.0,15.0,25.0,8,1,1,1,1,7,7,False,Mid-level pallet box lift
+data/canonical_validation/worker_14_pallet_deep_lift.jpg,subject_04,sagittal_right,55.0,28.0,60.0,50.0,20.0,45.0,12,0,2,2,1,7,10,False,Deep floor pallet lift 12kg
+data/canonical_validation/worker_15_floor_heavy_lift.jpg,subject_04,sagittal_right,62.0,32.0,65.0,45.0,25.0,50.0,16,0,2,3,1,7,12,False,Heavy crate manual handling 16kg
+data/canonical_validation/worker_16_squat_inspection.jpg,subject_04,sagittal_left,25.0,15.0,35.0,80.0,10.0,70.0,0,1,1,0,1,5,6,False,Squatting machine inspection
+data/canonical_validation/worker_17_conveyor_sorting.jpg,subject_05,sagittal_right,18.0,15.0,35.0,85.0,15.0,0.0,1,1,1,0,1,3,3,False,Conveyor parcel sortation
+data/canonical_validation/worker_18_conveyor_sorting_left.jpg,subject_05,sagittal_left,18.0,15.0,35.0,85.0,15.0,0.0,1,1,1,0,1,3,3,False,Conveyor parcel sort left view
+data/canonical_validation/worker_19_parts_bin_reach.jpg,subject_05,sagittal_right,22.0,18.0,48.0,80.0,15.0,0.0,3,1,1,1,1,7,5,False,Parts bin extended reach
+data/canonical_validation/worker_20_transfer_lift.jpg,subject_05,sagittal_right,48.0,22.0,40.0,75.0,15.0,20.0,6,1,1,1,1,7,6,False,Cart transfer lift

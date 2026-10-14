@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ergo-rula-reba"
+version = "0.1.0"
+description = "Automated RULA/REBA Posture Scoring research software (IEOM 2026)"
+authors = [{name = "Research Team"}]
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "opencv-python>=4.8.0",
+    "mediapipe>=0.10.0",
+    "ultralytics>=8.0.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+    "streamlit>=1.30.0",
+    "pyyaml>=6.0",
+    "pytest>=8.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

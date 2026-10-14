@@ -1,0 +1,2 @@
+pipeline,samples,rula_exact_acc,rula_pm1_acc,rula_linear_kappa,rula_quadratic_kappa,rula_macro_f1,reba_exact_acc,reba_pm1_acc,reba_linear_kappa,reba_quadratic_kappa,reba_macro_f1,angle_mae_deg,pck@0.2,mpjpe_px,latency_ms,fps,os,cpu,trunk_flexion_mae_deg,neck_flexion_mae_deg,upper_arm_flexion_mae_deg,lower_arm_flexion_mae_deg,overall_mean_angle_mae_deg
+Arm A (MediaPipe Pose),5,20.0,40.0,0.1026,0.2697,0.1667,20.0,40.0,0.3137,0.5638,0.3,21.3,85.0,14.2,14.3,69.9,Windows 10 (64bit),"Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",21.0,13.2,37.0,14.0,21.3

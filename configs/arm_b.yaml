@@ -1,0 +1,16 @@
+# Arm B Configuration: Keypoint R-CNN ResNet-50 FPN
+pipeline: "arm_b"
+
+model:
+  name: "keypointrcnn_resnet50_fpn"
+  weights: "COCO_V1"
+  box_score_thresh: 0.6
+  kpt_score_thresh: 0.3
+  device: "cpu"
+
+training:
+  epochs: 10
+  batch_size: 2
+  learning_rate: 0.0001
+  optimizer: "AdamW"
+  weight_decay: 0.0001

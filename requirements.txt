@@ -1,0 +1,28 @@
+# Core Numerical & Scientific Computing
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+
+# Computer Vision & Image Processing
+opencv-python>=4.8.0
+pillow>=9.5.0
+matplotlib>=3.7.0
+
+# Deep Learning Frameworks (CPU & CUDA compatible)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Pose Estimation Backbones
+mediapipe>=0.10.0
+ultralytics>=8.0.0
+
+# Interactive Web Application & Dashboard
+streamlit>=1.30.0
+
+# System Telemetry & YAML Configuration
+psutil>=5.9.0
+pyyaml>=6.0.0
+
+# Testing & Benchmark Verification
+pytest>=7.4.0

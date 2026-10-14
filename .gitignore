@@ -1,0 +1,47 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Large Model Weight Binaries (Auto-downloaded / generated at runtime)
+*.pt
+*.pth
+*.task
+*.onnx
+*.bin
+*.weights
+models/weights/*
+!models/weights/.gitkeep
+
+# Temporary Video & Media Uploads
+*.mp4
+*.avi
+*.mov
+temp/
+tmp/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# OS & Editor Specific Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
