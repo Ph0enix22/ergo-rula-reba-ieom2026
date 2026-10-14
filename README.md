@@ -108,8 +108,8 @@ The engine outputs the exact degree adjustments needed (e.g., *"Reduce trunk for
 
 ### 1. Installation
 ```bash
-git clone https://github.com/syed/ergo-rula-reba.git
-cd ergo-rula-reba
+git clone https://github.com/Ph0enix22/ergo-rula-reba-ieom2026.git
+cd ergo-rula-reba-ieom2026
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
