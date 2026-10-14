@@ -231,8 +231,17 @@ def plot_publication_figures(results: list[dict[str, Any]], output_dir: str = "r
 
 
 def main():
+    import argparse
+    from scripts.train_arm_c import train_arm_c
+
+    parser = argparse.ArgumentParser(description="Generate official IEOM 2026 paper benchmark results.")
+    parser.add_argument("--retrain-arm-c", action="store_true", help="Retrain Arm C model before evaluating.")
+    parser.add_argument("--arm-c-epochs", type=int, default=50, help="Number of training epochs for Arm C (default: 50).")
+    parser.add_argument("--device", type=str, default="cpu", choices=["cpu", "cuda"])
+    args = parser.parse_args()
+
     print("================================================================================")
-    print("Generating Official Research Results for IEOM 2026 Paper ID 283")
+    print("Generating Official Research Results for IEOM 2026 Paper IDs 283 & 284")
     print("================================================================================")
 
     data_csv = "data/canonical_validation.csv"
@@ -243,13 +252,18 @@ def main():
     dataset = ErgonomicsDataset(csv_path=data_csv, split=None)
     print(f"Loaded {len(dataset)} canonical evaluation samples across 5 subjects.")
 
+    # Train Arm C if requested or if weights do not exist
+    weights_arm_c = "models/weights/arm_c_best.pt"
+    if args.retrain_arm_c or not os.path.exists(weights_arm_c):
+        print(f"\nTraining Arm C (ResNet-50 E2E) for {args.arm_c_epochs} epochs on {args.device}...")
+        train_arm_c(data_csv=data_csv, epochs=args.arm_c_epochs, device_str=args.device, output_weights=weights_arm_c)
+
     # Initialize all 4 pipelines
     print("\n--- Initializing Architectural Pipelines ---")
     arm_a_mp = ArmAMediaPipe()
     arm_a_yo = ArmAYOLOv8()
     arm_b = ArmBKeypointRCNN()
 
-    weights_arm_c = "models/weights/arm_c_best.pt"
     if os.path.exists(weights_arm_c):
         print(f"Loading trained weights for Arm C from '{weights_arm_c}'...")
         arm_c = ArmCResNetE2E(weights_path=weights_arm_c, pretrained=False)

@@ -37,7 +37,18 @@ class ArmAYOLOv8(BaseErgoModel):
         - keypoints: (17, 3) array [x, y, confidence] in pixel space
         - names: list of 17 COCO keypoint names
         """
-        results = self.model(frame, verbose=False, conf=self.confidence_threshold)
+        # Guard against blank/all-zero frames causing Linux Python 3.13 autobackend FP exception
+        if frame is None or frame.size == 0 or frame.max() == 0:
+            return np.zeros((17, 3), dtype=np.float32), list(COCO_KEYPOINTS)
+
+        dev = "cpu" if str(self.device).lower() == "cpu" else self.device
+        results = self.model(
+            frame,
+            device=dev,
+            verbose=False,
+            half=False,
+            conf=self.confidence_threshold,
+        )
 
         if not results or len(results) == 0:
             return np.zeros((17, 3), dtype=np.float32), list(COCO_KEYPOINTS)

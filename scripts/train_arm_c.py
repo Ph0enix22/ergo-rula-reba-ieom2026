@@ -29,6 +29,7 @@ def train_arm_c(
     device_str: str = "cpu",
     output_weights: str = "models/weights/arm_c_best.pt",
     smoke_test: bool = False,
+    split: str | None = None,
 ):
     device = torch.device("cuda" if device_str == "cuda" and torch.cuda.is_available() else "cpu")
     print(f"Training Arm C (ResNet-50 E2E) on device: {device}")
@@ -37,8 +38,8 @@ def train_arm_c(
         print(f"Dataset '{data_csv}' missing. Generating canonical reference dataset...")
         data_csv = generate_canonical_reference_dataset()
 
-    train_ds = ErgonomicsDataset(csv_path=data_csv, split="train", seed=42)
-    val_ds = ErgonomicsDataset(csv_path=data_csv, split="val", seed=42)
+    train_ds = ErgonomicsDataset(csv_path=data_csv, split=split, seed=42)
+    val_ds = ErgonomicsDataset(csv_path=data_csv, split="val", seed=42) if split == "train" else None
 
     if len(train_ds) == 0:
         train_ds = ErgonomicsDataset(csv_path=data_csv, split=None)
@@ -114,6 +115,7 @@ def main():
     parser.add_argument("--device", type=str, default="cpu", choices=["cpu", "cuda"])
     parser.add_argument("--output-weights", type=str, default="models/weights/arm_c_best.pt")
     parser.add_argument("--smoke-test", action="store_true", help="Quick 1-step verification.")
+    parser.add_argument("--split", type=str, default=None, help="Dataset split: 'train', 'val', or None for all.")
     args = parser.parse_args()
 
     train_arm_c(
@@ -124,6 +126,7 @@ def main():
         device_str=args.device,
         output_weights=args.output_weights,
         smoke_test=args.smoke_test,
+        split=args.split,
     )
 
 

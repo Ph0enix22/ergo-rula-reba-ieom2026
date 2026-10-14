@@ -1,29 +1,29 @@
 Pipeline,Condition,RULA Score,REBA Score,Keypoints Detected,Latency (ms)
-Arm A (MediaPipe Pose),Baseline (Clean),3,1,28,41.5
-Arm A (MediaPipe Pose),Limb Occlusion (Arm),1,1,0,39.9
-Arm A (MediaPipe Pose),Limb Occlusion (Trunk),1,1,0,39.5
-Arm A (MediaPipe Pose),Severe Glare (Gamma 0.4),2,1,27,35.4
-Arm A (MediaPipe Pose),Dim Lighting (Gamma 2.2),3,1,28,36.2
-Arm A (MediaPipe Pose),Motion Blur (k=15),2,1,28,35.1
-Arm A (MediaPipe Pose),Camera Tilt (15 deg),2,1,28,34.3
-Arm A (YOLOv8-Pose),Baseline (Clean),2,1,16,178.5
-Arm A (YOLOv8-Pose),Limb Occlusion (Arm),2,1,16,71.3
-Arm A (YOLOv8-Pose),Limb Occlusion (Trunk),2,1,16,64.9
-Arm A (YOLOv8-Pose),Severe Glare (Gamma 0.4),2,1,16,64.9
-Arm A (YOLOv8-Pose),Dim Lighting (Gamma 2.2),2,1,16,65.4
-Arm A (YOLOv8-Pose),Motion Blur (k=15),2,1,16,61.5
-Arm A (YOLOv8-Pose),Camera Tilt (15 deg),2,1,16,63.9
-Arm B (ResNet-50 Keypoint R-CNN),Baseline (Clean),2,1,17,1721.5
-Arm B (ResNet-50 Keypoint R-CNN),Limb Occlusion (Arm),2,1,17,1630.1
-Arm B (ResNet-50 Keypoint R-CNN),Limb Occlusion (Trunk),2,1,16,1622.2
-Arm B (ResNet-50 Keypoint R-CNN),Severe Glare (Gamma 0.4),2,1,17,1676.6
-Arm B (ResNet-50 Keypoint R-CNN),Dim Lighting (Gamma 2.2),2,1,17,1783.5
-Arm B (ResNet-50 Keypoint R-CNN),Motion Blur (k=15),2,1,17,1868.1
-Arm B (ResNet-50 Keypoint R-CNN),Camera Tilt (15 deg),3,1,16,1772.2
-Arm C (ResNet-50 End-to-End),Baseline (Clean),2,2,0,66.7
-Arm C (ResNet-50 End-to-End),Limb Occlusion (Arm),2,2,0,57.3
-Arm C (ResNet-50 End-to-End),Limb Occlusion (Trunk),2,2,0,60.1
-Arm C (ResNet-50 End-to-End),Severe Glare (Gamma 0.4),3,3,0,59.5
-Arm C (ResNet-50 End-to-End),Dim Lighting (Gamma 2.2),3,2,0,57.8
-Arm C (ResNet-50 End-to-End),Motion Blur (k=15),2,2,0,58.1
-Arm C (ResNet-50 End-to-End),Camera Tilt (15 deg),5,4,0,54.8
+Arm A (MediaPipe Pose),Baseline (Clean),3,1,28,39.1
+Arm A (MediaPipe Pose),Limb Occlusion (Arm),1,1,0,37.9
+Arm A (MediaPipe Pose),Limb Occlusion (Trunk),1,1,0,38.0
+Arm A (MediaPipe Pose),Severe Glare (Gamma 0.4),2,1,27,35.7
+Arm A (MediaPipe Pose),Dim Lighting (Gamma 2.2),3,1,28,34.2
+Arm A (MediaPipe Pose),Motion Blur (k=15),2,1,28,34.5
+Arm A (MediaPipe Pose),Camera Tilt (15 deg),2,1,28,37.7
+Arm A (YOLOv8-Pose),Baseline (Clean),2,1,16,171.0
+Arm A (YOLOv8-Pose),Limb Occlusion (Arm),2,1,16,163.9
+Arm A (YOLOv8-Pose),Limb Occlusion (Trunk),2,1,16,61.1
+Arm A (YOLOv8-Pose),Severe Glare (Gamma 0.4),2,1,16,78.5
+Arm A (YOLOv8-Pose),Dim Lighting (Gamma 2.2),2,1,16,66.9
+Arm A (YOLOv8-Pose),Motion Blur (k=15),2,1,16,64.4
+Arm A (YOLOv8-Pose),Camera Tilt (15 deg),2,1,16,61.5
+Arm B (ResNet-50 Keypoint R-CNN),Baseline (Clean),2,1,17,18488.8
+Arm B (ResNet-50 Keypoint R-CNN),Limb Occlusion (Arm),2,1,17,1045.8
+Arm B (ResNet-50 Keypoint R-CNN),Limb Occlusion (Trunk),2,1,16,1689.8
+Arm B (ResNet-50 Keypoint R-CNN),Severe Glare (Gamma 0.4),2,1,17,1805.3
+Arm B (ResNet-50 Keypoint R-CNN),Dim Lighting (Gamma 2.2),2,1,17,1737.1
+Arm B (ResNet-50 Keypoint R-CNN),Motion Blur (k=15),2,1,17,1848.0
+Arm B (ResNet-50 Keypoint R-CNN),Camera Tilt (15 deg),3,1,16,1706.1
+Arm C (ResNet-50 End-to-End),Baseline (Clean),1,1,0,65.0
+Arm C (ResNet-50 End-to-End),Limb Occlusion (Arm),1,1,0,67.4
+Arm C (ResNet-50 End-to-End),Limb Occlusion (Trunk),1,1,0,67.4
+Arm C (ResNet-50 End-to-End),Severe Glare (Gamma 0.4),3,2,0,64.8
+Arm C (ResNet-50 End-to-End),Dim Lighting (Gamma 2.2),3,3,0,59.9
+Arm C (ResNet-50 End-to-End),Motion Blur (k=15),1,1,0,73.7
+Arm C (ResNet-50 End-to-End),Camera Tilt (15 deg),5,4,0,63.5

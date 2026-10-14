@@ -38,16 +38,16 @@ worker_15_floor_heavy_lift,Arm B (ResNet-50 Keypoint R-CNN),5,4,8,6,36.5,1,"Redu
 worker_16_squat_inspection,Arm B (ResNet-50 Keypoint R-CNN),4,4,3,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
 worker_19_parts_bin_reach,Arm B (ResNet-50 Keypoint R-CNN),6,4,6,4,31.7,2,"Reduce trunk forward bending by 22.1° (from 22.1° to 0.0°), which drops Trunk Posture Score from 3 to 1."
 worker_20_transfer_lift,Arm B (ResNet-50 Keypoint R-CNN),5,4,5,5,20.8,1,"Reduce trunk forward bending by 20.8° (from 40.8° to 20.0°), which drops Trunk Posture Score from 3 to 2."
-worker_05_forward_reach,Arm C (ResNet-50 End-to-End),4,4,3,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
-worker_06_forward_reach_left,Arm C (ResNet-50 End-to-End),3,4,2,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
-worker_07_bench_heavy_component,Arm C (ResNet-50 End-to-End),3,4,2,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
-worker_09_overhead_maintenance,Arm C (ResNet-50 End-to-End),4,4,4,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
-worker_10_overhead_maintenance_left,Arm C (ResNet-50 End-to-End),4,4,5,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_05_forward_reach,Arm C (ResNet-50 End-to-End),6,4,4,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_06_forward_reach_left,Arm C (ResNet-50 End-to-End),5,4,3,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_07_bench_heavy_component,Arm C (ResNet-50 End-to-End),6,4,5,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
+worker_09_overhead_maintenance,Arm C (ResNet-50 End-to-End),3,4,4,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_10_overhead_maintenance_left,Arm C (ResNet-50 End-to-End),3,4,3,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
 worker_11_overhead_heavy_wrench,Arm C (ResNet-50 End-to-End),4,4,5,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
 worker_12_overhead_inspection,Arm C (ResNet-50 End-to-End),3,3,4,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
-worker_13_pallet_mid_lift,Arm C (ResNet-50 End-to-End),2,4,2,5,0.0,1,Current posture already satisfies safe ergonomic criteria.
-worker_14_pallet_deep_lift,Arm C (ResNet-50 End-to-End),3,4,3,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
-worker_15_floor_heavy_lift,Arm C (ResNet-50 End-to-End),3,4,3,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
-worker_16_squat_inspection,Arm C (ResNet-50 End-to-End),3,3,3,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
-worker_19_parts_bin_reach,Arm C (ResNet-50 End-to-End),4,4,3,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
-worker_20_transfer_lift,Arm C (ResNet-50 End-to-End),4,4,4,5,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_13_pallet_mid_lift,Arm C (ResNet-50 End-to-End),6,4,6,5,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_14_pallet_deep_lift,Arm C (ResNet-50 End-to-End),5,4,6,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
+worker_15_floor_heavy_lift,Arm C (ResNet-50 End-to-End),4,4,7,4,10.0,1,"Reduce trunk forward bending by 10.0° (from 15.0° to 5.0°), which drops Trunk Posture Score from 2 to 1."
+worker_16_squat_inspection,Arm C (ResNet-50 End-to-End),4,3,5,3,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_19_parts_bin_reach,Arm C (ResNet-50 End-to-End),5,4,3,4,0.0,1,Current posture already satisfies safe ergonomic criteria.
+worker_20_transfer_lift,Arm C (ResNet-50 End-to-End),5,4,5,5,0.0,1,Current posture already satisfies safe ergonomic criteria.
