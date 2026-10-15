@@ -37,7 +37,10 @@ from rula_reba.rules import (
 from rula_reba.angles import ViewPlane
 from rula_reba.counterfactual import suggest_minimal_posture_fix
 from models.base import PosturePrediction
-from models.arm_a_mediapipe import ArmAMediaPipe
+try:
+    from models.arm_a_mediapipe import ArmAMediaPipe
+except Exception:
+    ArmAMediaPipe = None
 from models.arm_a_yolov8 import ArmAYOLOv8
 from models.arm_b_keypoint_rcnn import ArmBKeypointRCNN
 from models.arm_c_resnet_e2e import ArmCResNetE2E
@@ -106,8 +109,16 @@ st.markdown(
 # Cached Model Loaders
 # ==============================================================================
 @st.cache_resource(show_spinner="Loading MediaPipe Pose...")
-def load_arm_a_mediapipe() -> ArmAMediaPipe:
-    return ArmAMediaPipe()
+def load_arm_a_mediapipe() -> Any:
+    try:
+        if ArmAMediaPipe is None:
+            raise RuntimeError("MediaPipe Pose library could not be imported on this system.")
+        return ArmAMediaPipe()
+    except Exception as e:
+        import logging
+        logging.warning("MediaPipe Pose initialization failed: %s. Falling back to YOLOv8n-Pose.", e)
+        st.warning(f"⚠️ MediaPipe Pose is unavailable ({e}). Falling back to Arm A (YOLOv8n-Pose).")
+        return load_arm_a_yolo()
 
 
 @st.cache_resource(show_spinner="Loading YOLOv8n-Pose...")
@@ -343,14 +354,14 @@ with tab_analyze:
             st.dataframe(pd.DataFrame(comparison_rows), use_container_width=True)
 
         else:
-            # Single Pipeline Execution
+            # Single Pipeline Execution (Lazy Loading)
             model_map = {
-                "Arm A: MediaPipe Pose (71.5 FPS Edge)": load_arm_a_mediapipe(),
-                "Arm A: YOLOv8n-Pose (Ultralytics)": load_arm_a_yolo(),
-                "Arm B: ResNet-50 Keypoint R-CNN (COCO)": load_arm_b(),
-                "Arm C: ResNet-50 Multi-Task E2E": load_arm_c(),
+                "Arm A: MediaPipe Pose (71.5 FPS Edge)": load_arm_a_mediapipe,
+                "Arm A: YOLOv8n-Pose (Ultralytics)": load_arm_a_yolo,
+                "Arm B: ResNet-50 Keypoint R-CNN (COCO)": load_arm_b,
+                "Arm C: ResNet-50 Multi-Task E2E": load_arm_c,
             }
-            active_model = model_map[pipeline_choice]
+            active_model = model_map[pipeline_choice]()
 
             pred = active_model.predict(frame_bgr, config=config, view_plane=selected_view_plane)
             annotated = active_model.draw_overlay(frame_bgr, pred, blur_faces=face_blur_enabled)
