@@ -19,7 +19,10 @@ from rula_reba.rules import (
     REBA_TABLE_B,
     REBA_TABLE_C,
 )
-from rula_reba.counterfactual import suggest_minimal_posture_fix
+from rula_reba.counterfactual import (
+    suggest_minimal_posture_fix,
+    compute_workstation_modifications,
+)
 
 __all__ = [
     "RULAConfig",
@@ -31,6 +34,7 @@ __all__ = [
     "calculate_reba",
     "calculate_reba_from_angles",
     "suggest_minimal_posture_fix",
+    "compute_workstation_modifications",
     "RULA_TABLE_A",
     "RULA_TABLE_B",
     "RULA_TABLE_C",

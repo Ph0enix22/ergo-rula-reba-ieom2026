@@ -445,3 +445,45 @@ class TestCounterfactualXAI:
         # Verify recommended angles are physically realistic
         for joint, angle in res["recommended_angles"].items():
             assert -30.0 <= angle <= 120.0
+
+        # Verify Workstation Engineering Modifications (Paper ID 283)
+        assert "workstation_modifications" in res
+        assert "engineering_controls" in res
+        mods = res["workstation_modifications"]
+        assert len(mods) >= 3
+
+        # 1. Trunk flexion elevation (e.g. +32 cm pallet table elevation)
+        trunk_mod = next((m for m in mods if "Pallet Elevation" in m["category"]), None)
+        assert trunk_mod is not None
+        assert 25.0 <= trunk_mod["metric_value"] <= 40.0
+        assert "pallet" in trunk_mod["action"].lower() or "raise" in trunk_mod["action"].lower()
+
+        # 2. Wrist tilt and grip selection
+        wrist_mod = next((m for m in mods if "Bin Tilt" in m["category"]), None)
+        assert wrist_mod is not None
+        assert 15.0 <= wrist_mod["metric_value"] <= 35.0
+        assert "tilt" in wrist_mod["metric"].lower()
+
+        tool_mod = next((m for m in mods if "Tool Grip" in m["category"]), None)
+        assert tool_mod is not None
+
+    def test_overhead_reach_workstation_modifications(self):
+        # Overhead fixture repair posture (Action Level 3 / high risk with upper arm > 90°)
+        overhead_angles = {
+            "trunk_flexion": 15.0,
+            "neck_flexion": 25.0,
+            "upper_arm_flexion": 115.0,
+            "lower_arm_flexion": 110.0,
+            "wrist_flexion": 20.0,
+        }
+        cfg_rula = RULAConfig(muscle_use=True)
+        res = suggest_minimal_posture_fix(overhead_angles, rula_config=cfg_rula, target_action_level=2)
+        assert res["is_already_safe"] is False
+        assert "workstation_modifications" in res
+
+        overhead_mod = next((m for m in res["workstation_modifications"] if "Overhead" in m["category"]), None)
+        assert overhead_mod is not None
+        assert overhead_mod["metric_value"] < 0  # lowering distance is negative
+        assert 20.0 <= abs(overhead_mod["metric_value"]) <= 50.0
+        assert "lower" in overhead_mod["action"].lower()
+

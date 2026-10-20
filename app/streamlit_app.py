@@ -90,6 +90,21 @@ st.markdown(
         padding: 16px;
         margin-top: 10px;
     }
+    .eng-card {
+        background: #14232c;
+        border: 1px solid #16a085;
+        border-left: 5px solid #1abc9c;
+        border-radius: 8px;
+        padding: 14px;
+        margin-bottom: 12px;
+        min-height: 155px;
+    }
+    .eng-metric {
+        font-size: 22px;
+        font-weight: 700;
+        color: #1abc9c;
+        margin: 4px 0;
+    }
     .badge-privacy {
         display: inline-block;
         background: #27ae60;
@@ -434,13 +449,37 @@ with tab_analyze:
                         unsafe_allow_html=True,
                     )
                 with xai_cols[1]:
-                    st.markdown("**Recommended Postural Adjustments:**")
+                    st.markdown("**Biomechanical Angular Adjustments (in degrees):**")
                     recs = xai.get("explanations", [])
                     if recs:
                         for rec in recs:
                             st.info(f"🔹 {rec}")
                     else:
                         st.write("No direct joint adjustments found.")
+
+                # Workstation Engineering Modifications (Paper ID 283)
+                st.markdown("#### 🛠️ Workstation Engineering Modifications (in cm / tilt angle)")
+                st.caption("Standard anthropometric limb models (50th percentile adult: torso length 50 cm, functional reach 65 cm) translating angular reductions into physical dimensional adjustments.")
+
+                mods = xai.get("workstation_modifications", [])
+                if mods:
+                    mod_cols = st.columns(min(len(mods), 3))
+                    for i, mod in enumerate(mods):
+                        col_idx = i % min(len(mods), 3)
+                        with mod_cols[col_idx]:
+                            st.markdown(
+                                f"""
+                                <div class='eng-card'>
+                                    <div class='metric-title'>{mod.get('category')}</div>
+                                    <div class='eng-metric'>{mod.get('metric')}</div>
+                                    <div style='font-weight:600; font-size:13px; margin: 6px 0;'>{mod.get('action')}</div>
+                                    <div style='font-size:11px; color:#bdc3c7;'>{mod.get('engineering_rationale')}</div>
+                                </div>
+                                """,
+                                unsafe_allow_html=True,
+                            )
+                else:
+                    st.write("No physical workstation modifications required.")
 
     else:
         st.info("👆 Please upload a worker image/video or select a canonical reference posture above to begin inspection.")
